@@ -11,8 +11,6 @@ class Game:
             return
 
         self.field[y][x] = p
-        # print(self)
-
 
     def check_cells(self, *cells):
         mult = 1
@@ -48,7 +46,6 @@ class Game:
                 res = self.check_cells((0, 0), (1, 1), (2, 2))
             if res == 0:
                 res = self.check_cells((2, 0), (1, 1), (0, 2))
-
 
         if all([all(row) for row in self.field]):
             res = 3
