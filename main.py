@@ -32,7 +32,7 @@ while True:
             chosen_cell = max(free_cells, key=lambda x: preds[x])
             x, y = chosen_cell % 3, chosen_cell // 3
         else:
-            x, y = map(int, input().split())
+            x, y = map(int, input('enter x and y coordinates (0-2): ').split())
 
         while not game.place(p, x, y):
             x, y = map(int, input().split())
