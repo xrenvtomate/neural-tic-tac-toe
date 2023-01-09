@@ -36,7 +36,7 @@ while True:
 
         while not game.place(p, x, y):
             x, y = map(int, input().split())
-        
+
         print(game)
         res = game.check_game()
         p = 3 - p
