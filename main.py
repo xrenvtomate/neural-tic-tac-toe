@@ -34,7 +34,9 @@ while True:
         else:
             x, y = map(int, input().split())
 
-        game.place(p, x, y)
+        while not game.place(p, x, y):
+            x, y = map(int, input().split())
+        
         print(game)
         res = game.check_game()
         p = 3 - p

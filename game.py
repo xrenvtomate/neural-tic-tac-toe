@@ -5,12 +5,13 @@ class Game:
     def place(self, p, x, y):
         if not (0 <= x < 3 and 0 <= y < 3):
             print('not correct positon')
-            return
+            return False
         if self.field[y][x] != 0:
             print('this positon is already taken')
-            return
+            return False
 
         self.field[y][x] = p
+        return True
 
     def check_cells(self, *cells):
         mult = 1
